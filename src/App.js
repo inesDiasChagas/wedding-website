@@ -8,7 +8,7 @@ function App() {
   const [loginError, setLoginError] = useState("");
 
   const handleLogin = ({ username, password }) => {
-    if (username === "guest" && password === "wedding123") {
+    if (username === "a" && password === "a") {
       const userInfo = {
         name: "Guest",
         type: UserType.ADMIN,

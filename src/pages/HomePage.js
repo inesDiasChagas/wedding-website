@@ -1,13 +1,19 @@
 import React from "react";
 
 import CountDown from "../components/CountDown/CountDown";
-import SectionWrapper from "../components/SectionWrapper";
-import AnnouncementSection from "../components/AnnouncementSection";
+import SectionWrapper from "../components/Sections/SectionWrapper";
+import AnnouncementSection from "../components/Sections/AnnouncementSection";
+import image from "../styles/images/image.png";
 
 const HomePage = () => {
   return (
     <React.Fragment>
-      <AnnouncementSection />
+      <AnnouncementSection
+        imageUrl={image}
+        title='Mário & Inês'
+        subtitle='CASAMENTO'
+        description='UINTA-FEIRA, 26 DE FEVEREIRO DE 2026'
+      />
       <SectionWrapper>
         <CountDown />
       </SectionWrapper>
