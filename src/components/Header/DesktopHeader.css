@@ -1,0 +1,17 @@
+.navigation-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-container ul {
+    margin: 2rem 0 2rem 0;
+}
+
+.navigation-container li a {
+    color: var(--main-foreground-color);
+    margin: 1rem;
+}
+
+.navigation-container li a:hover {
+}

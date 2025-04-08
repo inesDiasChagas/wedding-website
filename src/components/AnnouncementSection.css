@@ -1,0 +1,32 @@
+.announcement-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../styles/images/image.png") center center;
+    background-size: cover;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.announcement {
+    display: flex;
+    flex-direction: column;
+    border:var(--main-foreground-color) solid 3px;
+    border-radius: 5px;
+    padding: 3rem;
+    background: rgba(37, 58, 52, 0.25);
+}
+
+.title {
+    font-family: Pecita;
+    font-size: 4rem;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    font-weight: 300;
+} 
+
+.description {
+    font-size: 0.85rem;
+    font-weight: 300;
+}

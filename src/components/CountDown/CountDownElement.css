@@ -1,0 +1,12 @@
+.countdown-element {
+    display: grid;
+    font-family: Pecita;
+}
+
+.countdown-value {
+    font-size: 3rem;
+}
+
+.countdown-title {
+    font-size: 1rem;
+}
