@@ -1,10 +1,7 @@
-.navigation-container{
+.navigation-container ul{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.navigation-container ul {
     margin: 2rem 0 2rem 0;
 }
 

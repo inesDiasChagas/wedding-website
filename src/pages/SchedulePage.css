@@ -1,0 +1,90 @@
+.schedule-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.schedule-item {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    align-items: center;
+    padding: 20px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.schedule-item.active {
+    height: 150px;
+    grid-template-columns: 1fr;
+}
+
+.schedule-summary {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    flex-direction: column;
+    align-items: flex-end;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.schedule-icon {
+    height: 1.5rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.schedule-time {
+    font-family: Pecita;
+    font-size: 1.5rem;
+}
+
+.schedule-title {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.schedule-description {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.schedule-info-btn {
+    margin-top: 0.5rem;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.schedule-info-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.left-border-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -3,10 +3,10 @@ import MobileHeader from "./MobileHeader";
 import DesktopHeader from "./DesktopHeader";
 
 const Header = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 375);
+    setIsMobile(window.innerWidth <= 768);
   };
 
   useEffect(() => {
