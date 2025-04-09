@@ -1,3 +1,5 @@
 .section {
     padding: 4rem 5rem;
+    background: linear-gradient(var(--background-colour), var(--background-colour)), var(--announcement-image) center center;
+    background-size: cover;
 }

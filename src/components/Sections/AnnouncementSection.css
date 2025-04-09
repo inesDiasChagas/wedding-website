@@ -1,5 +1,5 @@
 .announcement-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--announcement-image) center center;
+    background: linear-gradient(var(--background-colour), var(--background-colour)), var(--announcement-image) center center;
     background-size: cover;
     height: 30rem;
     display: flex;

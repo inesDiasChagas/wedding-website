@@ -9,10 +9,11 @@ const HomePage = () => {
   return (
     <React.Fragment>
       <AnnouncementSection
-        imageUrl={image}
         title='Mário & Inês'
         subtitle='CASAMENTO'
         description='QUINTA-FEIRA, 26 DE FEVEREIRO DE 2026'
+        backgroundColour='rgba(0,0,0,0.5)'
+        backgroundImageUrl={image}
       />
       <SectionWrapper>
         <CountDown />
