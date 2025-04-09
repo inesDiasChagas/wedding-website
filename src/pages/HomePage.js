@@ -20,7 +20,7 @@ const HomePage = () => {
       <SectionWrapper>
         <button>Registar</button>
       </SectionWrapper>
-      <SectionWrapper>//Questoes Frequentes</SectionWrapper>
+      <SectionWrapper>Questoes Frequentes</SectionWrapper>
     </React.Fragment>
   );
 };

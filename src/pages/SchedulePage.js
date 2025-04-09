@@ -73,19 +73,23 @@ const SchedulePage = () => {
               style={{ backgroundColor: item.color }}
               onClick={() => setActiveIndex(index)}
             >
-              <div className='schedule-summary'>
-                <img src={clock} alt='Clock icon' className='icon' />
-                <span className='time'>{item.time}</span>
-              </div>
-              {isActive && (
-                <div className='schedule-details'>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  {item.button && (
-                    <button className='info-btn'>More information</button>
-                  )}
-                </div>
+              {!isActive && (
+                <img src={clock} alt='Clock icon' className='schedule-icon' />
               )}
+              <div className='schedule-summary'>
+                <span className='schedule-time'>{item.time}</span>
+                {isActive && item.title && (
+                  <h3 className='schedule-title'>{item.title}</h3>
+                )}
+                {isActive && item.description && (
+                  <p className='schedule-description'>{item.description}</p>
+                )}
+                {isActive && item.button && (
+                  <button className='schedule-info-btn'>
+                    More information
+                  </button>
+                )}
+              </div>
             </div>
           );
         })}
