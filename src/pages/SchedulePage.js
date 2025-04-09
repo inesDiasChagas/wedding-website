@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-
 import SectionWrapper from "../components/Sections/SectionWrapper";
-
 import "./SchedulePage.css";
 
 const scheduleItems = [
@@ -11,8 +9,8 @@ const scheduleItems = [
     description: "",
     icon: "🪑",
     sectionColour: "#8F674D",
-    titleColour: "#2E1F14", // Darker
-    descriptionColour: "#4E392A", // Darker
+    titleColour: "#2E1F14",
+    descriptionColour: "#4E392A",
   },
   {
     time: "16:30 – 17:00",
@@ -20,8 +18,8 @@ const scheduleItems = [
     description: "",
     icon: "💍",
     sectionColour: "#B9977B",
-    titleColour: "#5A3F2D", // Darker
-    descriptionColour: "#7C5E48", // Darker
+    titleColour: "#5A3F2D",
+    descriptionColour: "#7C5E48",
   },
   {
     time: "17:00 – 18:30",
@@ -29,8 +27,8 @@ const scheduleItems = [
     description: "",
     icon: "🥂",
     sectionColour: "#ECD8C0",
-    titleColour: "#7F6A53", // Darker
-    descriptionColour: "#90816B", // Darker
+    titleColour: "#7F6A53",
+    descriptionColour: "#90816B",
     button: true,
   },
   {
@@ -39,8 +37,8 @@ const scheduleItems = [
     description: "Consulta a disposição dos lugares aqui.",
     icon: "🪑",
     sectionColour: "#F4D5A1",
-    titleColour: "#8A784E", // Darker
-    descriptionColour: "#A08E64", // Darker
+    titleColour: "#8A784E",
+    descriptionColour: "#A08E64",
   },
   {
     time: "19:00 – 21:30",
@@ -48,8 +46,8 @@ const scheduleItems = [
     description: "",
     icon: "🍽️",
     sectionColour: "#F1F5E0",
-    titleColour: "#7C816A", // Darker
-    descriptionColour: "#98A08D", // Darker
+    titleColour: "#7C816A",
+    descriptionColour: "#98A08D",
   },
   {
     time: "21:30 – 22:00",
@@ -57,8 +55,8 @@ const scheduleItems = [
     description: "",
     icon: "🍰",
     sectionColour: "#CBDAAB",
-    titleColour: "#5F6A3E", // Darker
-    descriptionColour: "#6E7C4A", // Darker
+    titleColour: "#5F6A3E",
+    descriptionColour: "#6E7C4A",
   },
   {
     time: "22:00 – 01:00",
@@ -66,17 +64,45 @@ const scheduleItems = [
     description: "",
     icon: "💃",
     sectionColour: "#B5C2A6",
-    titleColour: "#4E563E", // Darker
-    descriptionColour: "#6E7A5C", // Darker
+    titleColour: "#4E563E",
+    descriptionColour: "#6E7A5C",
   },
 ];
 
 const SchedulePage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const handleItemClick = (index) => {
+    setActiveIndex(index);
+  };
+
+  const currentItem = scheduleItems[activeIndex];
+  const prevIndex =
+    activeIndex === 0 ? scheduleItems.length - 1 : activeIndex - 1;
+  const previousItem = scheduleItems[prevIndex];
+
   return (
     <SectionWrapper>
       <div className='schedule-container'>
+        <div className='left-border-overlay' />
+
+        <div
+          className='icon-overlay'
+          style={{
+            top: `${(activeIndex + 1) * 60 + activeIndex * 40}px`,
+            backgroundColor: previousItem.sectionColour,
+          }}
+        >
+          <div
+            className='icon-overlay-inner'
+            style={{
+              backgroundColor: currentItem.sectionColour,
+            }}
+          >
+            <span style={{ fontSize: "1.5rem" }}>{currentItem.icon}</span>
+          </div>
+        </div>
+
         {scheduleItems.map((item, index) => {
           const isActive = index === activeIndex;
           return (
@@ -84,7 +110,7 @@ const SchedulePage = () => {
               key={index}
               className={`schedule-item ${isActive ? "active" : ""}`}
               style={{ backgroundColor: item.sectionColour }}
-              onClick={() => setActiveIndex(index)}
+              onClick={() => handleItemClick(index)}
             >
               {!isActive && (
                 <svg
@@ -92,9 +118,7 @@ const SchedulePage = () => {
                   fill='none'
                   xmlns='http://www.w3.org/2000/svg'
                   className='schedule-icon'
-                  style={{
-                    stroke: item.titleColour,
-                  }}
+                  style={{ stroke: item.titleColour }}
                 >
                   <path
                     d='M12 7V12L13.5 14.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z'
@@ -105,6 +129,7 @@ const SchedulePage = () => {
                   />
                 </svg>
               )}
+
               <div className='schedule-summary'>
                 <span className='schedule-time'>{item.time}</span>
                 {isActive && item.title && (
@@ -125,7 +150,7 @@ const SchedulePage = () => {
                 )}
                 {isActive && item.button && (
                   <button className='schedule-info-btn'>
-                    More information
+                    Mais informações
                   </button>
                 )}
               </div>

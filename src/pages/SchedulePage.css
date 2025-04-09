@@ -2,6 +2,7 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
 .schedule-item {
@@ -33,15 +34,16 @@
 
 .schedule-icon {
     height: 1.5rem;
-    justify-self: center; 
-    align-self: center; 
+    justify-self: center;
+    align-self: center;
 }
-.schedule-time{
+
+.schedule-time {
     font-family: Pecita;
     font-size: 1.5rem;
 }
 
-.schedule-title{
+.schedule-title {
     font-size: 0.85rem;
     margin-top: 0.25rem;
 }
@@ -64,6 +66,41 @@
 
 .schedule-info-btn:hover {
     background: rgba(255, 255, 255, 0.25);
+}
+
+.icon-overlay {
+    position: absolute;
+    left: 70px;
+    width: 75px;
+    height: 75px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.5s ease, background-color 0.5s ease;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.icon-overlay-inner {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: background-color 0.5s ease;
+}
+
+.left-border-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 
 @keyframes fadeIn {
