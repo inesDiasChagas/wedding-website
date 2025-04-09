@@ -1,0 +1,11 @@
+:root {
+    --viewport-xs: 320;
+    --viewport-sm: 375;
+    --viewport-sm-alt: 576;
+    --viewport-md: 768;
+    --viewport-lg: 992;
+    --viewport-xl: 1200;
+    --viewport-xxl: 1400;
+    --viewport-1929: 1929;
+    --viewport-2560: 2560;
+}

@@ -1,6 +1,8 @@
 import React from "react";
 import ScheduleIcon from "../../styles/icons/ScheduleIcon";
 
+import "./AccordionElement.css";
+
 const AccordionElement = ({ item, isActive, onClick }) => {
   return (
     <div

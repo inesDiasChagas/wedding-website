@@ -1,0 +1,35 @@
+.schedule-icon {
+    height: 1.5rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.schedule-time {
+    font-family: Pecita;
+    font-size: 1.5rem;
+}
+
+.schedule-title {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.schedule-description {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.schedule-info-btn {
+    margin-top: 0.5rem;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.schedule-info-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}

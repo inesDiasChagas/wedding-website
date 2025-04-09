@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "./Accordion.css";
 import AccordionMarker from "./AccordionMarker";
 import AccordionElement from "./AccordionElement";
+
+import "./Accordion.css";
 
 const Accordion = ({ scheduleItems }) => {
   const [activeIndex, setActiveIndex] = useState(0);
