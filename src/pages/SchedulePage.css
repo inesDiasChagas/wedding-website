@@ -8,7 +8,6 @@
 .schedule-item {
     cursor: pointer;
     transition: all 0.5s ease;
-    color: #222222;
     display: grid;
     grid-template-columns: 62px 1fr;
     align-items: center;
@@ -85,7 +84,6 @@
 .icon-overlay-inner {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
