@@ -12,7 +12,7 @@ const HomePage = () => {
         imageUrl={image}
         title='Mário & Inês'
         subtitle='CASAMENTO'
-        description='UINTA-FEIRA, 26 DE FEVEREIRO DE 2026'
+        description='QUINTA-FEIRA, 26 DE FEVEREIRO DE 2026'
       />
       <SectionWrapper>
         <CountDown />
@@ -20,6 +20,7 @@ const HomePage = () => {
       <SectionWrapper>
         <button>Registar</button>
       </SectionWrapper>
+      <SectionWrapper>//Questoes Frequentes</SectionWrapper>
     </React.Fragment>
   );
 };

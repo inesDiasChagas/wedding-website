@@ -9,9 +9,9 @@ const AnnouncementSection = ({ imageUrl, title, subtitle, description }) => {
       style={{ "--announcement-image": `url(${imageUrl})` }}
     >
       <div className='announcement'>
-        <span className='subtitle'>{subtitle}</span>
-        <span className='title'>{title}</span>
-        <span className='description'>{description}</span>
+        {subtitle && <span className='subtitle'>{subtitle}</span>}
+        {title && <span className='title'>{title}</span>}
+        {description && <span className='description'>{description}</span>}
       </div>
     </div>
   );

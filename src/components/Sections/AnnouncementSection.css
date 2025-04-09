@@ -9,7 +9,7 @@
 .announcement {
     display: flex;
     flex-direction: column;
-    border: var(--main-foreground-color) solid 3px;
+    border:var(--main-foreground-color) solid 3px;
     border-radius: 5px;
     padding: 3rem;
     background: rgba(37, 58, 52, 0.25);
