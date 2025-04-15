@@ -12,28 +12,30 @@ export default function LoginForm({ onSubmit, error }) {
   };
 
   return (
-    <div className='login-container fade-in'>
-      <h2 className='login-title'>Bem-Vindo</h2>
-      <form onSubmit={handleSubmit} className='login-form'>
-        <input
-          type='text'
-          placeholder='Username'
-          value={username}
-          className='login-input'
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          type='password'
-          placeholder='Password'
-          value={password}
-          className='login-input'
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        {error && <div className='login-error'>{error}</div>}
-        <button type='submit' className='login-button'>
-          Entrar
-        </button>
-      </form>
+    <div className='login-wrapper'>
+      <div className='login-container fade-in'>
+        <h2 className='login-title'>Bem-Vindo</h2>
+        <form onSubmit={handleSubmit} className='login-form'>
+          <input
+            type='text'
+            placeholder='Username'
+            value={username}
+            className='login-input'
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            type='password'
+            placeholder='Password'
+            value={password}
+            className='login-input'
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          {error && <div className='login-error'>{error}</div>}
+          <button type='submit' className='login-button'>
+            Entrar
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
