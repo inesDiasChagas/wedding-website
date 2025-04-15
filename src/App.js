@@ -2,6 +2,7 @@ import { useState } from "react";
 import { UserType } from "./utils/User";
 import LoginForm from "./components/LoginForm/LoginForm";
 import AuthenticatedApp from "./pages/AuthenticatedApp";
+import React from "react";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -16,18 +17,18 @@ function App() {
       setUser(userInfo);
       setLoginError("");
     } else {
-      setLoginError("Invalid username or password");
+      setLoginError("Credenciais inválidas");
     }
   };
 
   return (
-    <div>
+    <React.Fragment>
       {user ? (
         <AuthenticatedApp user={user} />
       ) : (
         <LoginForm onSubmit={handleLogin} error={loginError} />
       )}
-    </div>
+    </React.Fragment>
   );
 }
 
