@@ -6,7 +6,7 @@ import "./CountDownDisplay.css";
 const CountDownDisplay = ({ days, hours, minutes, seconds }) => {
   return (
     <React.Fragment>
-      <div className='container'>
+      <div className='countdown-container'>
         <CountDownElement title={"DIAS"} value={days}></CountDownElement>
 
         <CountDownElement title={"HORAS"} value={hours}></CountDownElement>

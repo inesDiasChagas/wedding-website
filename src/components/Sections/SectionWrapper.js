@@ -1,11 +1,17 @@
 import React from "react";
 
 import "./SectionWrapper.css";
+import classNames from "classnames";
 
-const SectionWrapper = ({ children, backgroundColour, backgroundImageUrl }) => {
+const SectionWrapper = ({
+  children,
+  className,
+  backgroundColour,
+  backgroundImageUrl,
+}) => {
   return (
     <div
-      className='section'
+      className={classNames("section", className)}
       style={{
         "--announcement-image": `url(${backgroundImageUrl})`,
         "--background-colour": `${backgroundColour}`,

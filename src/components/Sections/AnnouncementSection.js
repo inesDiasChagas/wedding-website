@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./AnnouncementSection.css";
+import SectionWrapper from "./SectionWrapper";
 
 const AnnouncementSection = ({
   title,
@@ -10,19 +11,17 @@ const AnnouncementSection = ({
   backgroundImageUrl,
 }) => {
   return (
-    <div
+    <SectionWrapper
       className='announcement-section'
-      style={{
-        "--announcement-image": `url(${backgroundImageUrl})`,
-        "--background-colour": `${backgroundColour}`,
-      }}
+      backgroundColour={backgroundColour}
+      backgroundImageUrl={backgroundImageUrl}
     >
       <div className='announcement'>
         {subtitle && <span className='subtitle'>{subtitle}</span>}
         {title && <span className='title'>{title}</span>}
         {description && <span className='description'>{description}</span>}
       </div>
-    </div>
+    </SectionWrapper>
   );
 };
 

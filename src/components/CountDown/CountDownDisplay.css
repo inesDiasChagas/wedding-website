@@ -1,4 +1,11 @@
-.container {
+.countdown-container {
     display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 425px) {
+    .countdown-container {
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }

@@ -8,19 +8,19 @@ const DesktopHeader = () => {
     <nav className='navigation-container'>
       <ul>
         <li>
-          <Link to={"/"}>{"Inicio"}</Link>
+          <Link to={"/"}>{"Início"}</Link>
         </li>
         <li>
-          <Link to={"/schedule"}>{"Horario"}</Link>
+          <Link to={"/schedule"}>{"Horário"}</Link>
         </li>
         <li>
-          <Link to={"/registry"}>{"Registo"}</Link>
+          <Link to={"/registry"}>{"Registro"}</Link>
         </li>
         <li>
           <Link to={"/photos"}>{"Fotos"}</Link>
         </li>
         <li>
-          <Link to={"/contacts"}>{"Contactos"}</Link>
+          <Link to={"/contacts"}>{"Contatos"}</Link>
         </li>
       </ul>
     </nav>

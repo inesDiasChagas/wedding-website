@@ -1,5 +1,21 @@
 .section {
-    padding: 4rem 5rem;
-    background: linear-gradient(var(--background-colour), var(--background-colour)), var(--announcement-image) center center;
-    background-size: cover;
+  padding: 5rem 2.5rem;
+  background: linear-gradient(
+      var(--background-colour),
+      var(--background-colour)
+    ),
+    var(--announcement-image) center center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+    .section {
+        padding: 5rem;
+    }
 }
